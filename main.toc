@@ -1,0 +1,4 @@
+\contentsline {section}{\numberline {1}CORE COURSE}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}High Level Language Program Design 2-1}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}NON-MAJOR COURSE}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Course B}{3}{subsection.2.1}%

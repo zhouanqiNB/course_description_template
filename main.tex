@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{longtable}
+\usepackage{iitem}
+\usepackage{enumitem}
+
+\hypersetup{colorlinks=true,linkcolor=black}
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+
+\usepackage[top=2cm, bottom=2cm, left=1.5cm, right=1.5cm]{geometry}
+% 页眉和页脚设置
+\pagestyle{fancy}
+\fancyhf{} % 清空默认的页眉和页脚
+\fancyfoot[C]{\thepage} % 页脚中央显示页码
+\renewcommand{\headrulewidth}{0.4pt} % 页眉下方的横线
+\fancyhead[R]{\nouppercase{\leftmark}} % 将课程类型放在页眉右侧
+
+
+% general info ------------------------------------------------------------+
+\title{Course Description}
+\author{--}
+\date{\today}
+\newcommand{\majorname}{Computer Science and Technology}
+\newcommand{\collegename}{College of Computer Science}
+\newcommand{\universityname}{-- University}
+
+\begin{document}
+
+% cover ------------------------------------------------------------+
+\begin{titlepage}
+ \centering
+ \vspace*{4cm}
+ \Huge \textbf{Course Description} \\
+ \vspace{10cm}
+ \begin{flushright}
+  \emph{\Large\majorname}\\
+  \vspace{0.1cm}
+  \emph{\Large\collegename}\\
+  \vspace{0.1cm}
+  \emph{\Large\universityname}
+ \end{flushright}
+\end{titlepage}
+
+% contents ------------------------------------------------------------+
+\clearpage
+\setcounter{page}{1}
+\pagenumbering{roman}
+\tableofcontents % 添加目录
+\clearpage
+
+\pagestyle{fancy} % 重新激活页眉和页脚
+\pagenumbering{arabic}
+
+% core course ------------------------------------------------------------+
+\section{CORE COURSE}
+\markright{CORE COURSE}
+
+\input{courses/01_highLevelLang.tex}
+% \input{courses/02_OS.tex}
+
+\clearpage
+
+% non-major course ------------------------------------------------------------+
+\section{NON-MAJOR COURSE}
+\markright{NON-MAJOR COURSE}
+
+% a non-major course ------------------------------------------------------------+
+\subsection{Course B}
+\renewcommand{\arraystretch}{1.5} % 设置行高
+\begin{longtable}{|p{3cm}|p{10cm}|}
+
+\hline% --------------------------------------------------
+\textbf{Course Name} & 
+Course B
+\\\hline% ------------------------------------------------
+\textbf{Credits} & 
+4.0 
+\\\hline% ------------------------------------------------
+\textbf{Semester} & 
+Fall 
+\\\hline% ------------------------------------------------
+
+\end{longtable}
+
+
+% end ------------------------
+
+\clearpage
+
+\end{document}
